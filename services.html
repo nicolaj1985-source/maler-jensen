@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="da"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vores services | Maler Mads</title>
+<meta name="description" content="Se alle services fra Maler Mads">
+<link rel="icon" href="/favicon.ico"><link rel="canonical" href="https://ditdomaene.dk/services.html">
+<script type="application/ld+json" id="schemaMarkup"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}body{font-family:'DM Sans',sans-serif;background:#F8F5F0;color:#1A1A18;line-height:1.65}a{color:inherit;text-decoration:none}.site-header{background:#fff;border-bottom:1px solid #E2DDD6;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}.logo{font-weight:700}.nav-cta{background:#2D5016;color:#fff;padding:.6rem 1.4rem;border-radius:6px;font-weight:600;font-size:.9rem}.container{max-width:1000px;margin:0 auto;padding:4rem 2rem}h1{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;margin-bottom:2rem}.svc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}.svc-card{display:flex;align-items:center;gap:1rem;background:#fff;border:1px solid #E2DDD6;border-radius:10px;padding:1.2rem 1.4rem;position:relative;overflow:hidden;transition:box-shadow .15s,transform .1s}.svc-card:hover{box-shadow:0 6px 24px rgba(26,26,24,.1);transform:translateY(-2px)}.svc-acc{position:absolute;left:0;top:0;bottom:0;width:4px;background:#2D5016}.svc-name{flex:1;font-weight:600}.svc-arr{color:#2D5016;transition:transform .15s}.svc-card:hover .svc-arr{transform:translateX(4px)}.site-footer{background:#1A1A18;color:#9198b8;padding:2rem;text-align:center;font-size:.85rem;margin-top:4rem}.social-links{display:flex;gap:1rem;justify-content:center;margin-bottom:1rem}.social-links a{color:#9198b8;font-size:1.1rem}</style>
+</head><body>
+<header class="site-header"><a href="/" class="logo cfg-bizName">Maler Mads</a><a href="/tilbud" class="nav-cta cfg-ctaLink" rel="nofollow sponsored">Kontakt os</a></header>
+<main class="container"><h1>Vores services</h1><div class="svc-grid">
+      <a href="/maling-af-koekkenlaager.html" class="svc-card"><span class="svc-acc"></span><span class="svc-name">Maling af køkkenlåger</span><span class="svc-arr">→</span></a>
+      <a href="/maling-af-carport.html" class="svc-card"><span class="svc-acc"></span><span class="svc-name">Maling af carport</span><span class="svc-arr">→</span></a>
+    </div></main>
+<footer class="site-footer"><div class="social-links" id="footerSocial"></div><p>Maler Mads</p></footer>
+
+<script>
+(function(){
+  function apply(d){
+    window._cardData=d;
+    var C={"cfg-bizName":{k:"bizName",t:"text"},"cfg-city":{k:"city",t:"text"},"cfg-phone":{k:"phone",t:"tel"},"cfg-ctaLink":{k:"ctaLink",t:"link"},"cfg-fbLink":{k:"fbLink",t:"link"}};
+    Object.keys(C).forEach(function(cls){var c=C[cls],v=d[c.k]||"";document.querySelectorAll("."+cls).forEach(function(el){if(c.t==="tel"&&el.tagName==="A"){el.href="tel:"+v.replace(/\s+/g,"");}else if(c.t==="link"&&el.tagName==="A"){el.href=v;}if(!el.children.length){el.textContent=v;}});});
+    document.querySelectorAll("a.cfg-ctaLink").forEach(function(el){el.setAttribute("rel","nofollow sponsored");});
+    var w=document.getElementById("footerSocial");if(!w)return;w.innerHTML="";
+    [{k:"fbLink",i:"fa-brands fa-facebook-f",l:"Facebook"},{k:"youtubeLink",i:"fa-brands fa-youtube",l:"YouTube"},{k:"whatsappLink",i:"fa-brands fa-whatsapp",l:"WhatsApp"},{k:"instagramLink",i:"fa-brands fa-instagram",l:"Instagram"},{k:"googleBusiness",i:"fa-brands fa-google",l:"Google Business"},{k:"trustpilotLink",i:"fa-solid fa-star",l:"Trustpilot"}].forEach(function(p){var u=d[p.k];if(!u||!u.trim())return;if(p.k==="whatsappLink"&&!u.startsWith("http")){u="https://wa.me/"+u.replace(/\D/g,"");}var a=document.createElement("a");a.href=u;a.target="_blank";a.rel="noopener noreferrer";a.setAttribute("aria-label",p.l);a.innerHTML="<i class=\""+p.i+"\"></i>";w.appendChild(a);});
+  }
+  fetch("card.json?v="+Date.now()).then(function(r){return r.json();}).then(apply).catch(function(e){console.warn("[card.json]",e);});
+})();
+</script>
+</body></html>
